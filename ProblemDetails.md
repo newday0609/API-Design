@@ -6,7 +6,7 @@
 | ------ | ---- | ----- | ------ |
 | 400 Bad Request | newday:error:validation | Your request parameters or fields contain validation errors. | [Validation](#validation) |
 | 404 Not Found | newday:error:missing | The resource requested does not exist. | [Missing](#missing) |
-| 500 Internal Server Error | newday:error:unavailable | Service can't process the request right now. e.g. one of the dependencies is unavailable. | [Missing](#missing) |
+| 500 Internal Server Error | newday:error:unavailable | Service can't process the request right now. e.g. one of the dependencies is unavailable. | [Unavailable](#unavailable) |
 
 ## Sample Generic Errors
 
