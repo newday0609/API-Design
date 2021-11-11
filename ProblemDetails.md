@@ -12,10 +12,12 @@
 
 | Status | Sample |
 | ------ | ------ |
+| 400 Bad Request |  |
 | 401 Unauthorized | [Unauthorized](#unauthorized) |
 | 403 Forbidden | [Forbidden](#forbidden) |
 | 404 Not Found | [Not Found](#generic-not-found) |
 | 415 Unsupported Media Type | [Unsupported Media Type](#unsupported-media-type) |
+| 429 Too Many Requests | [Too Many Requests](#too-many-requests) |
 | 500 Internal Server Error | [Internal Server Error](#generic-internal-server-error) |
 
 ## Examples
@@ -35,20 +37,31 @@ Content-Type: application/problem+json
     "invalidValues": [
         {
             "name": "age",
-            "reason": "must be a positive integer"
+            "description": "must be a positive integer"
         },
         {
             "path": "$.items[0].color",
-            "reason": "must be 'green', 'red' or 'blue'"
+            "description": "must be 'green', 'red' or 'blue'"
+        },
+        {
+            "path": "$.items[0].name",
+            "reason": "mandatory"
         }
     ]
 }
 ```
 
+Reasons:
+- mandatory
+- length
+- format
+
 ### Unauthorized
 
+Authentication required
+
 ```text
-HTTP/1.1 400 Bad Request
+HTTP/1.1 401 Unauthorized
 Content-Type: application/problem+json
 ```
 
@@ -101,6 +114,19 @@ Content-Type: application/problem+json
 ```text
 HTTP/1.1 415 Unsupported Media Type
 Content-Type: application/problem+json
+```
+
+```json
+{
+}
+```
+
+### Too Many Requests
+
+```text
+HTTP/1.1 429 Too Many Requests
+Content-Type: application/problem+json
+Retry-After: 60
 ```
 
 ```json
