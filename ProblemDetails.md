@@ -33,28 +33,21 @@ Content-Type: application/problem+json
 
 ```json
 {
-    "type": "newday:error:validation",
-    "invalidValues": [
-        {
-            "name": "age",
-            "description": "must be a positive integer"
-        },
-        {
-            "path": "$.items[0].color",
-            "description": "must be 'green', 'red' or 'blue'"
-        },
-        {
-            "path": "$.items[0].name",
-            "reason": "mandatory"
-        }
-    ]
+    "type": "newday:generic:error:validation",
+    "errors": {
+        "age": [
+            "must be a positive integer",
+            "must be less then 120"
+        ],
+        "items[0].color": [
+            "must be 'green', 'red' or 'blue'"
+        ],
+        "customer.name": [
+            "mandatory"
+        ]
+    }
 }
 ```
-
-Reasons:
-- mandatory
-- length
-- format
 
 ### Unauthorized
 
