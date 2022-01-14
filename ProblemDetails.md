@@ -4,9 +4,9 @@
 
 | Status | Type | Title | Sample |
 | ------ | ---- | ----- | ------ |
-| 400 Bad Request | newday:error:validation | Your request parameters or fields contain validation errors. | [Validation](#validation) |
-| 404 Not Found | newday:error:missing | The resource requested does not exist. | [Missing](#missing) |
-| 500 Internal Server Error | newday:error:unavailable | Service can't process the request right now. e.g. one of the dependencies is unavailable. | [Unavailable](#unavailable) |
+| 400 Bad Request | newday:generic:error:validation | Your request parameters or fields contain validation errors. | [Validation](#validation) |
+| 404 Not Found | newday:generic:error:missing | The resource requested does not exist. | [Missing](#missing) |
+| 500 Internal Server Error | newday:generic:error:unavailable | Service can't process the request right now. e.g. one of the dependencies is unavailable. | [Unavailable](#unavailable) |
 
 ## Sample Generic Errors
 
@@ -98,7 +98,7 @@ Content-Type: application/problem+json
 
 ```json
 {
-    "type": "newday:error:missing"
+    "type": "newday:generic:error:missing"
 }
 ```
 
@@ -153,7 +153,7 @@ Retry-After: 2
 
 ```json
 {
-    "type": "newday:error:unavailable",
+    "type": "newday:generic:error:unavailable",
 }
 ```
 
@@ -167,12 +167,12 @@ Retry-After: 2
 
 ```json
 {
-    "type": "newday:error:unavailable",
+    "type": "newday:generic:error:unavailable",
     "dependencies": [
         {
             "name": "foo",
             "details": {
-                "type": "newday:error:unavailable"
+                "type": "newday:generic:error:unavailable"
             }
         }
     ]
