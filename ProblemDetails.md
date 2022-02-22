@@ -1,12 +1,40 @@
 # API Errors Samples
 
-## Sample Types
+## ProblemDetails
+`ProblemDetails` is not yet a standard, it has been proposed 5 years ago but potentially will never be ratified as a standard.
+Its aim is to be machine-readable and leverage web technologies like URIs.
+The proposal itself recommend to stick to your existing format instead of adopting ProblemDetails, if you already have one that works for you.
+Given we don't currently have an existing internal standard, we should adopt this proposed standard format instead of trying to craft our own.
+It is also widely adopted by web frameworks, including ASP.NET Core.
+
+## Types
+
+The `type` field identifies the type of error. It can be seen as a subclass as the main category of error as identified by the status code. If the status code is enough to identify the problem nature (e.g. 404) it should be omitted (which is equivalent to the value `about:blank`)
+
+Types should be defined and shared across the org or superset of APIs, and the type field should contain the URI. Note a URI is not necessarily a URL and we will use an URN (e.g. newday:generic:error:validation).
+
+Should be seen as an ID to map the error to any handling logic or user messaging and each `type` can have it's own set of extra field (called `extensions`). For this reason, different errors that need to provide different fields with extra info, should have different types.
+
+Note this should not be too fine grained but just provide high level types of errors (can eventually be augmented with other info via extensions) and great care need is needed for public APIs to avoid exposing internal details that can lead to attack vectors.
+
+## Use in ASP.NET Core
+
+ASP.NET Core provide a [ProblemDetails](https://docs.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.mvc.problemdetails?view=aspnetcore-6.0) class which provide flexibility to have `extensions` or could be extended for different error types.
+One example is [HttpValidationProblemDetails](https://docs.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.http.httpvalidationproblemdetails?view=aspnetcore-6.0).
+
+## Register of generic types
 
 | Status | Type | Title | Sample |
 | ------ | ---- | ----- | ------ |
 | 400 Bad Request | newday:generic:error:validation | Your request parameters or fields contain validation errors. | [Validation](#validation) |
 | 404 Not Found | newday:generic:error:missing | The resource requested does not exist. | [Missing](#missing) |
 | 500 Internal Server Error | newday:generic:error:unavailable | Service can't process the request right now. e.g. one of the dependencies is unavailable. | [Unavailable](#unavailable) |
+
+## Custom types
+
+To define custom types for a particular service or domain, define the URI as `newday:{domain/system}:error:{name}`. e.g.. `newday:kyc:error:authenticationExpired`
+
+Avoid defining custom types when not needed. e.g. a call to /document/{id} for the not found scenario doesn't require a custom type or extra info, a 404 provides enough info by itself.
 
 ## Sample Generic Errors
 
@@ -25,6 +53,9 @@
 ### Bad Request
 
 #### Validation
+
+In ASP.NET Core, use [ValidationProblemDetails](https://docs.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.mvc.validationproblemdetails?view=aspnetcore-6.0) and set the type field to `newday:generic:error:validation`.
+If you need extra fields to provide additional information, on top of the validation errors, define your own custom type.
 
 ```text
 HTTP/1.1 400 Bad Request
