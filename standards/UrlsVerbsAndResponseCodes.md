@@ -9,7 +9,7 @@
 
 While a few of the above TL;DR decisions have subjective answers on either side, we should try to just pick one where possible to avoid yak shaving (especially when it comes to plural/singular entity names).
 
-## Naming
+## Naming in Urls
 
 **You MUST must have consistency locally within your system for pluralisation**, so no API on the same sub-domain that has multiple conventions.
 

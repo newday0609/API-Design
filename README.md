@@ -38,7 +38,7 @@ If you are producing APIs for your specific application only (for example, a Bac
 
 ## API Standards
 
-The following categories describe our requirements for API design. It is expected you follow the approach outlined in each sub-section.
+The following categories describe our requirements for API design. **It is expected you follow the approach outlined in each sub-section**.
 
 - [Urls, Verbs, and Response Codes](standards/UrlsVerbsAndResponseCodes.md)
 - [Versioning](standards/Versioning.md)
@@ -47,6 +47,8 @@ The following categories describe our requirements for API design. It is expecte
 
 While these are our standards, if your API design meaningfully, rather than incidentally doesn't match their expectations, please open a pull request to this document and we will adapt the standards to cover your needs.
 
+Not following these standards will greatly slow down your path to production as we discuss your design on it's way through.
+
 ## Guidelines
 
 These are a set of recommendations for solving common problems in API design. We strongly prefer you follow this guidance unless there's a good reason to deviate from it.
@@ -54,6 +56,7 @@ These are a set of recommendations for solving common problems in API design. We
 - [Status Codes](guidelines/StatusCodes.md)
 - [Errors: ProblemDetails](guidelines/ProblemDetails.md)
 - [Collections and Pagination](guidelines/Collections.md)
+- [Naming](guidelines/Naming.md)
 - [New API Checklist](guidelines/NewAPIChecklist.md)
 
 ## Contributing
