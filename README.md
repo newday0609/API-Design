@@ -36,7 +36,7 @@ If you are producing APIs for your specific application only (for example, a Bac
 
 ## API Standards
 
-- [Urls, Verbs, and Response Codes](reference/UrlsVerbsAndResponseCodes.md)
+- [Urls, Verbs, and Response Codes](standards/UrlsVerbsAndResponseCodes.md)
 - [Versioning](standards/Versioning.md)
 - [Security](standards/Security.md)
 - [PCI Data](standards/PCIData.md)
