@@ -1,6 +1,6 @@
 # Security
 
-** Requires fleshing out standard authentication information here**
+** Requires fleshing out standard authentication information here **
 
 The OWASP Project have a [cheatsheet on REST security](https://cheatsheetseries.owasp.org/cheatsheets/REST_Security_Cheat_Sheet.html).
 

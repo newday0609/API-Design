@@ -16,7 +16,7 @@ RESTful API design is a practice that all RESTful based API should follow, there
   - [Principles](#principles)
   - [API Standards](#api-standards)
   - [Guidelines](#guidelines)
-- [Contributing](#contributing)
+  - [Contributing](#contributing)
 
 <!-- /code_chunk_output -->
 
@@ -48,7 +48,7 @@ Work in progress set of guidelines for REST APIs.
 - [Status Codes guidelines](guidelines/StatusCodes.md)
 - [Errors: ProblemDetails](guidelines/ProblemDetails.md)
 
-# Contributing
+## Contributing
 
 Please open pull requests to this standard to initate debate and changes.
 
