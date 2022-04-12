@@ -15,6 +15,7 @@ This document is not meant to be exhaustive, and will likely change over time as
 - [API Design at NewDay](#api-design-at-newday)
   - [Contents](#contents)
   - [Disclaimer & Intended Audience](#disclaimer-intended-audience)
+  - [What is an API?](#what-is-an-api)
   - [Principles](#principles)
   - [API Standards](#api-standards)
   - [Guidelines](#guidelines)
@@ -31,6 +32,16 @@ There will be categories of APIs that require different implementation details t
 **By default, we will assume that the vast majority of APIs we produce for the consumption of other teams, partners, or the public are REST based and will adhere to the following principles.**
 
 If you are producing APIs for your specific application only (for example, a Backend-for-Frontend API), it's acceptible to deviate from these standards to serve your applications needs, however, any API that doesn't meet the standards here shall **never** be used for any other purpose.
+
+## What is an API?
+
+There's repeated confusion around the terms "API" and "Endpoint" when we're talking about RESTful APIs. For the sake of this guide, and for further discussions, the following is true:
+
+- An `API` is a set of endpoints that are exposed over HTTP.
+- An `API` is made up of one logical, deployable unit of code (a Functions App, a Web App, or a container serving HTTP traffic).
+- An `Endpoint` is an individual HTTP Route that is exposed by an API. One `API` can contain one or more `endpoints`.
+- Each `API` contains representations of one or more entities.
+- Each `API` exposes a `Health Check` endpoint on `/health`, and an `OpenAPI` specification on either `/swagger.json` or `/openapi.json`.
 
 ## Principles
 
