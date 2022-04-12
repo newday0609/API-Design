@@ -3,9 +3,12 @@
 ## ProblemDetails
 
 `ProblemDetails` is not yet a standard, it has been proposed 5 years ago but potentially will never be ratified as a standard.
+
 Its aim is to be machine-readable and leverage web technologies like URIs.
 The proposal itself recommend to stick to your existing format instead of adopting ProblemDetails, if you already have one that works for you.
+
 Given we don't currently have an existing internal standard, we should adopt this proposed standard format instead of trying to craft our own.
+
 It is also widely adopted by web frameworks, including ASP.NET Core.
 
 ## Types

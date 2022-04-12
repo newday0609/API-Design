@@ -1,8 +1,10 @@
-# API-Design
+# API Design at NewDay
 
 The goal of this document is to support the advancement of the [RESTful API Maturity model](reference/MaturityModel.md).
 
 RESTful API design is a practice that all RESTful based API should follow, there are options available within for engineers to choose from, giving allowances for differing requirements. These are based on our own engineering experience and various industry guidelines.
+
+This document is not meant to be exhaustive, and will likely change over time as we learn more.
 
 ## Contents
 
@@ -10,7 +12,7 @@ RESTful API design is a practice that all RESTful based API should follow, there
 
 <!-- code_chunk_output -->
 
-- [API-Design](#api-design)
+- [API Design at NewDay](#api-design-at-newday)
   - [Contents](#contents)
   - [Disclaimer & Intended Audience](#disclaimer-intended-audience)
   - [Principles](#principles)
@@ -36,17 +38,23 @@ If you are producing APIs for your specific application only (for example, a Bac
 
 ## API Standards
 
+The following categories describe our requirements for API design. It is expected you follow the approach outlined in each sub-section.
+
 - [Urls, Verbs, and Response Codes](standards/UrlsVerbsAndResponseCodes.md)
 - [Versioning](standards/Versioning.md)
 - [Security](standards/Security.md)
 - [PCI Data](standards/PCIData.md)
 
+While these are our standards, if your API design meaningfully, rather than incidentally doesn't match their expectations, please open a pull request to this document and we will adapt the standards to cover your needs.
+
 ## Guidelines
 
-Work in progress set of guidelines for REST APIs.
+These are a set of recommendations for solving common problems in API design. We strongly prefer you follow this guidance unless there's a good reason to deviate from it.
 
-- [Status Codes guidelines](guidelines/StatusCodes.md)
+- [Status Codes](guidelines/StatusCodes.md)
 - [Errors: ProblemDetails](guidelines/ProblemDetails.md)
+- [Collections and Pagination](guidelines/Collections.md)
+- [New API Checklist](guidelines/NewAPIChecklist.md)
 
 ## Contributing
 

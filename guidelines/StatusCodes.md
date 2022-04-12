@@ -1,7 +1,9 @@
 # HTTP Status Codes Guidelines
 
 When defining status codes, look at the API from a consumer perspective and think about the meaning of the operation and what action the consumer will take in reaction to the status code received.
+
 The status codes should not necessarily reflect the outcome of underlying operation and should not be driven based on observability goals.
+
 Also only standard status codes should be used, using status codes in the wrong context (e.g. protocol specific ones like 422) or with the wrong semantic is both surprising and usually problematic for consumers (it can break client libraries, monitoring, proxies and so on)
 
 | Status | Use case |
