@@ -55,6 +55,7 @@ The following categories describe our requirements for API design. **It is expec
 - [Versioning](standards/Versioning.md)
 - [Security](standards/Security.md)
 - [PCI Data](standards/PCIData.md)
+- [Mandatory Endpoints](standards/MandatoryEndpoints.md)
 
 While these are our standards, if your API design meaningfully, rather than incidentally doesn't match their expectations, please open a pull request to this document and we will adapt the standards to cover your needs.
 
