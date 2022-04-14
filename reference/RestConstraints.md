@@ -1,5 +1,7 @@
 # REST Constrains
 
+---
+
 - Client-Server
 - Stateless
 - Cacheable

@@ -1,5 +1,7 @@
 # HTTP Status Codes Guidelines
 
+---
+
 When defining status codes, look at the API from a consumer perspective and think about the meaning of the operation and what action the consumer will take in reaction to the status code received.
 
 The status codes should not necessarily reflect the outcome of underlying operation and should not be driven based on observability goals.
@@ -14,3 +16,12 @@ Also only standard status codes should be used, using status codes in the wrong 
 | 500 | The service can not handle the request. It doesn't matter if the service itself is broken, or one of the core dependency is not available. From the consumer point of view, what matters is that the request can not be fulfilled at the moment and they should retry later. There are other errors that more specifically define unavailability (502,3,4) but those are generally used by proxies/gateway (like APIM in our case) when they can't reach the backend. |
 
 _One high level categorization that usually help with error is that 5XX and 408 (request timeout) are transient, as in the consumer should try to submit the same request later. All the other errors are not, there is no point sending the same request again._
+
+
+---
+
+Each request to the API should respond with the appropriate HTTP response code as defined in RFC 2616 Section 10:
+
+[RFC 2616 - Hypertext Transfer Protocol -- HTTP/1.1](https://datatracker.ietf.org/doc/html/rfc2616#section-10)
+
+**We must not repurpose response codes for other purposes than originally intended**. (e.g. don't use WebDAV extensions where a 500 would suffice.)

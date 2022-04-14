@@ -1,6 +1,8 @@
 # Security
 
-** Requires fleshing out standard authentication information here **
+---
+
+**Requires fleshing out standard authentication information here**.
 
 ## Transport Security
 

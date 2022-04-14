@@ -1,5 +1,7 @@
 # API Errors Samples
 
+---
+
 ## ProblemDetails
 
 `ProblemDetails` is not yet a standard, it has been proposed 5 years ago but potentially will never be ratified as a standard.

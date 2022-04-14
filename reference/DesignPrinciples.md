@@ -1,5 +1,7 @@
 # Principles
 
+---
+
 - We build API’s with a long-term mindset
   - Your API is a contract
   - Versioning is not a solution; it can be a necessary evil

@@ -1,5 +1,7 @@
 # URLs, Verbs, and Response Codes
 
+---
+
 #### TL;DR
 
 - Use standard HTTP verbs
@@ -21,22 +23,50 @@ If you include the type in the variable name it must represent the underlaying t
 
 ## Casing
 
-### MUST make sense without using a casing strategy
-
-Assume case insensitive.
+### Path values must be lowercase, and hypenated
 
 Examples:
 
     /collection-records/1
-    /collectionrecords/1
+
+    NOT
+
+    /CollectionRecords/1
+    /collectionRecords/1
+
+### URL paths should be case insensitive
+
+Example:
+
+    /collection-records/1
+    /Collection-Records/1
+    /CoLlEcTiOn-ReCoRdS/1
+
+Are all the same route.
 
 ### MUST use camelCase for query parameters
 
-Example: /collectionrecords?sortBy=Date
+Example: /collection-records?sortBy=Date
+
+## Headers
 
 ### HTTP headers use Capitalized-Hyphenated-Terms
 
 Any HTTP headers are the exception and SHOULD use standard HTTP convention of Capitalized-Hyphenated-Terms.
+
+### MUST NOT use x-prefixed headers
+
+`x-prefixed` headers are not-recommended, and considered bad practice. We should not use `x-prefixed` headers.
+
+If you want to use custom headers of your own design:
+
+Example:
+
+    My-Custom-Header: My-Custom-Value
+
+    NOT
+
+    X-My-Custom-Header: My-Custom-Value
 
 ## Resource Design
 
@@ -55,7 +85,7 @@ Examples:
 
 ### Must Identify resources and sub-resources via path segments if sub-resources are not top-level resources
 
-If sub-resources are required, use the path segments to indiciate them.
+If sub-resources are required, use the path segments to indicate them.
 
 Examples:
 
@@ -95,14 +125,4 @@ OPTIONS | Get information about a request; see below for details.               
 
 ## Nouns
 
-Stick to business-wide terminology for common nouns.
-
-See: https://newdaycards.atlassian.net/wiki/spaces/ENG/pages/2403926249/Glossary+of+Nouns
-
-## Response Codes
-
-Each request to the API should respond with the appropriate HTTP response code as defined in RFC 2616 Section 10:
-
-[RFC 2616 - Hypertext Transfer Protocol -- HTTP/1.1](https://datatracker.ietf.org/doc/html/rfc2616#section-10)
-
-We must not repurpose response codes for other purposes than originally intended.
+Stick to business-wide terminology for common nouns, following our [glossay of nouns](https://newdaycards.atlassian.net/wiki/spaces/ENG/pages/2403926249/Glossary+of+Nouns). We also have a [glossary of business terms for personas](https://newdaycards.atlassian.net/wiki/spaces/DA/pages/1668776990/Users+and+Personas).

@@ -1,10 +1,24 @@
 # Versioning
 
+---
+
 All our API’s should follow a versioning protocol and avoid minor versioning.
 
 Only major breaking changes should result in a new version, however, we expect developers to minimise the need for versioning by practicing good “addition” to API’s rather than creating a new version for every change. If items need to be made obsolete later it should be only removed when there is a major version change.
 
 All changes should be documented in the project “Change Log”.
+
+## The Use of Version Numbers
+
+- Major version numbers should be used for breaking changes.
+- Minor for non-breaking changes.
+
+We support version numbers in the forms:
+
+- 1
+- 1.0
+
+We appreciate that this isn't the full breadth of semantic versioning, but more specificity is of no help to consuming clients in this context.
 
 ## Versioning Standard
 

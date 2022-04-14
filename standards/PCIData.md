@@ -1,5 +1,7 @@
 # PCI Data
 
+---
+
 We **SHOULD NOT transmit personally identifiable information (PII) parameters in the URL (as part of path or query string)** because this information can be inadvertently exposed via client, network, and server logs and other mechanisms. While all communication must be over SSL - we’re protecting against humans (either making a genuine mistake, or those being more malicious).
 
 Consequently, a service **SHOULD accept PII parameters transmitted as headers**.

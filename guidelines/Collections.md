@@ -1,5 +1,7 @@
 # Collections and Pagination
 
+---
+
 This guidance is mostly derived from [Microsofts API guidelines](https://github.com/microsoft/api-guidelines/blob/vNext/Guidelines.md#9-collections).
 
 ## Serving collections over HTTP

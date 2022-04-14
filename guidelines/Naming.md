@@ -1,5 +1,7 @@
 # Naming Guidelines
 
+---
+
 These naming guidelines are lifted from [Microsofts REST guidelines](https://github.com/microsoft/api-guidelines/blob/vNext/Guidelines.md#17-naming-guidelines) as the advice is sane and non-controversial.
 
 These naming patterns will not be strictly enforced (and won't stop you going live), but they are recommended, and following these general patterns will greatly help our APIs feel consistent.
@@ -45,9 +47,20 @@ Services SHOULD NOT use the following names:
 
 ## Date and time properties
 
-- For properties requiring both date and time, services **MUST** use the suffix 'DateTime'.
-- For properties requiring only date information without specifying time, services **MUST** use the suffix 'Date', e.g. birthDate.
-- For properties requiring only time information without specifying date, services **MUST** use the suffix 'Time', e.g. appointmentStartTime.
+If your name for a property contains `dateTime` it **MUST** accept a date AND a time. Equally, if it ONLY says `time`, it **MUST** only accept a time, and if it says `date`, it **MUST** only accept a date.
+
+It's fine to disregard `date` or `dateTime` in lieu of a name like `createdAt` or `updatedAt`, and rely on the OpenAPI types to provide context.
+
+Dates should be represented as [ISO8601](https://en.wikipedia.org/wiki/ISO_8601) strings, with included timezone information where known.
+
+| Type   | Format |
+| ------ | -------- |
+| Date | 2022-04-14 |
+| Date and time in UTC, with timezone | 2022-04-14T12:37:35+00:00 |
+| Date and time in UTC | 2022-04-14T12:37:35Z |
+| Week | 2022-W15 |
+
+These formats are the default serialization outputs of .NET DateTime types.
 
 ## Name properties
 

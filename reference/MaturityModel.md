@@ -1,8 +1,16 @@
 # API Maturity Model
 
+---
+
 ## Level 1
 
 Plain OLD XML or other weird API formats, zero-consistency from API to API, single endpoint API designs, chaos, incoherent response documents
+
+## To Progress
+
+- Either
+  - Migrate to JSON as a transport format.
+  - Split up single "RPC endpoints" into multiple different paths.
 
 ## Level 2
 

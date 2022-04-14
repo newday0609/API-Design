@@ -1,5 +1,7 @@
 # API Design at NewDay
 
+---
+
 The goal of this document is to support the advancement of the [RESTful API Maturity model](reference/MaturityModel.md).
 
 RESTful API design is a practice that all RESTful based API should follow, there are options available within for engineers to choose from, giving allowances for differing requirements. These are based on our own engineering experience and various industry guidelines.
@@ -41,7 +43,7 @@ There's repeated confusion around the terms "API" and "Endpoint" when we're talk
 - An `API` is made up of one logical, deployable unit of code (a Functions App, a Web App, or a container serving HTTP traffic).
 - An `Endpoint` is an individual HTTP Route that is exposed by an API. One `API` can contain one or more `endpoints`.
 - Each `API` contains representations of one or more entities.
-- Each `API` exposes a `Health Check` endpoint on `/health`, and an `OpenAPI` specification on either `/swagger.json` or `/openapi.json`.
+- Each `API` exposes a `Health Check` endpoint on `/healthcheck`, a `/heartbeat`, and an `OpenAPI` specification on either `/swagger.json` or `/openapi.json`.
 
 ## Principles
 
