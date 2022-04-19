@@ -29,7 +29,7 @@ This document is not meant to be exhaustive, and will likely change over time as
 
 Please note, this document is **not intended to be used for non-REST based APIs**.
 
-There will be categories of APIs that require different implementation details than outlined here, such as GraphAPIs (they're by definition, not REST based), or that adhear to another protocol or architectural style.
+There will be categories of APIs that require different implementation details than outlined here, such as GraphAPIs (they're by definition, not REST based), or that adhere to another protocol or architectural style.
 
 **By default, we will assume that the vast majority of APIs we produce for the consumption of other teams, partners, or the public are REST based and will adhere to the following principles.**
 
