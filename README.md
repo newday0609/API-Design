@@ -75,6 +75,6 @@ These are a set of recommendations for solving common problems in API design. We
 
 ## Contributing
 
-Please open pull requests to this standard to initate debate and changes.
+See the [contributing guidelines](CONTRIBUTING.md).
 
 [A list of authors and contributors is avilable here](AUTHORS.md).
