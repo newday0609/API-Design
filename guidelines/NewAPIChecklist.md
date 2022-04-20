@@ -8,7 +8,7 @@ Whilst you can "get away with" releasing APIs to internal teams in a substandard
 
 [ ] - Heart Beat Endpoint `/heartbeat`
 [ ] - Health Check Endpoint `/healthcheck`
-[ ] - Serves an OpenAPI specification (`/openapi.json` or `/swagger.json`)
+[ ] - Serves an OpenAPI specification (`/openapi.json` or `/swagger.json`) which follows our requirements
 [ ] - Includes AT LEAST ONE accepted authentication mechanism
 [ ] - Versioning approach selected
 
