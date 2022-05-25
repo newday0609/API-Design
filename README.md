@@ -58,6 +58,7 @@ The following categories describe our requirements for API design. **It is expec
 - [Security](standards/Security.md)
 - [PCI Data](standards/PCIData.md)
 - [Mandatory Endpoints](standards/MandatoryEndpoints.md)
+- [API Tagging and Release Process](standards/APITaggingAndReleaseProcess.md)
 
 While these are our standards, if your API design meaningfully, rather than incidentally doesn't match their expectations, please open a pull request to this document and we will adapt the standards to cover your needs.
 
@@ -75,6 +76,6 @@ These are a set of recommendations for solving common problems in API design. We
 
 ## Contributing
 
-Please open pull requests to this standard to initate debate and changes.
+See the [contributing guidelines](CONTRIBUTING.md).
 
 [A list of authors and contributors is avilable here](AUTHORS.md).
