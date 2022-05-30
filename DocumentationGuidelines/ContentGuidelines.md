@@ -17,9 +17,11 @@ They must be suitable for both native and non-native English speakers.
   - [Table of Contents](#table-of-contents)
   - [Required Documents](#required-documents)
   - [The User Guide Content](#the-user-guide-content)
+    - [Writing Style](#writing-style)
   - [OpenAPI spec files](#openapi-spec-files)
-  - [The Publication Process](#the-publication-process)
-  - [Appendix A - Writing Style](#appendix-a-writing-style)
+  - [Document Publication Process](#document-publication-process)
+    - [Adding Publication Front Matter](#adding-publication-front-matter)
+    - [Opening a PR to the Content Repository](#opening-a-pr-to-the-content-repository)
 
 <!-- /code_chunk_output -->
 
@@ -27,8 +29,8 @@ They must be suitable for both native and non-native English speakers.
 
 We require the following documents to be provided to the Developer Portal team:
 
-1. A user-guide introduction, written in `markdown`.
-2. An Open API 3.0 spec file describing your APIs.
+1. A **user-guide introduction**, written in `markdown`.
+2. An **Open API 3.0 spec file** describing your APIs.
 
 These two artifacts will be combined and ingested into the Developer Portal.
 
@@ -36,13 +38,13 @@ These two artifacts will be combined and ingested into the Developer Portal.
 
 This **introduction** should include the following:
 
-* What the API does
-* Who the intended users are
-* What scenarios you would use this API in
-* Any Prerequisites
-* Any useful diagrams:
-  * **(Optional)** Sequence Diagram explaining any particular sequencing of API calls across multiple endpoints.
-  * **(Optional)** Context Diagram - e.g. how the MultiQuote API fits into the context of aggregators acquisition process.
+- What the API does
+- Who the intended users are
+- What scenarios you would use this API in
+- Any Prerequisites
+- Any useful diagrams:
+  - **(Optional)** Sequence Diagram explaining any particular sequencing of API calls across multiple endpoints.
+  - **(Optional)** Context Diagram - e.g. how the MultiQuote API fits into the context of aggregators acquisition process.
 
 You can (obviously!) include any additional information as applicable.
 
@@ -50,14 +52,33 @@ Write the content in any editor [that supports Markdown format](https://www.mark
 
 Provide this file as `index.md`.
 
+### Writing Style
+
+We have a [Style Guide](./StyleGuide.md) that you can use to help write your documentation. It includes guidance on tone of voice, capitalisation, and other written style.
+
+In addition to the style guide, consider the following when writing:
+
+- **Think about the reader**: When you write, consider the following questions:
+  - Why will they read this content?
+  - Does your documentation answer the most commonly asked questions?
+  - How long did it take to find the information they are looking for?
+
+- **Write an essay plan**: It's easier to write an outline of your documentation first, and then revise it over subsequent drafts, expanding on your points. This will improve the flow of the content.
+
+- **Keep your sentences short**: It is  difficult to understand long sentences. Write simple sentences that are easier to follow.
+
+- **Punctuation is important**: Punctuation can alter the meaning of your content - make sure you write "let's eat, kids", not "let's eat kids"!
+
+- **Include a Glossary**: Explain the terms and their definitions, if required. **[Ed: We should maintain a centralised glossay in the dev portal]**
+
 ## OpenAPI spec files
 
 Your spec file should be OpenAPI 3.0 and incluse at least the following properties:
 
-* The path and any required query parameters
-* Example requests
-* Example responses
-* Error Codes
+- The path and any required query parameters
+- Example requests
+- Example responses
+- Error Codes
 
 When you are describing the parameters, you must include at least the parameter name, and a meaningful description.
 
@@ -70,26 +91,53 @@ When you are describing the parameters, you must include at least the parameter 
 
 **It is expected that you use language provided tooling to generate these OpenAPI specs from your code.**
 
-## The Publication Process
+## Document Publication Process
 
-For information on the process that you must follow to provide the content to the Developer Portal team, refer to the [Document Publication Process](./DocumentPublicationProcess.md).
+Documentation publication relies on adding `front matter` to your `markdown` files. To add your teams `APIs` into the portal, you need to:
 
-## Appendix A - Writing Style
+1. Add the correct `Publication Front Matter`
+2. Open a `PR` to the [Documentation Repository](https://github.com/NewDayCards/NewDay.Docs.DevPortal.Content) with your `markdown` and `Open API Spec` files.
 
-We have a [Style Guide](./StyleGuide.md) that you can use to help write your documentation. It includes guidance on tone of voice, capitalisation, and other written style.
+### Adding Publication Front Matter
 
-In addition to the style guide, consider the following when writing:
+`Front Matter` is content that appears at the top of your `markdown` files in the form:
 
-* **Think about the reader**: When you write, consider the following questions:
-  * Why will they read this content?
-  * Does your documentation answer the most commonly asked questions?
-  * How long did it take to find the information they are looking for?
+```md
+---
+some-bool: true
+some-string: "some value"
+---
+# Regular Markdown Content Here
 
-* **Write an essay plan**: It's easier to write an outline of your documentation first, and then revise it over subsequent drafts, expanding on your points. This will improve the flow of the content.
+This file contains front-matter
+```
 
-* **Keep your sentences short**: It is  difficult to understand long sentences. Write simple sentences that are easier to follow.
+Our publication process requires two values:
 
-* **Punctuation is important**: Punctuation can alter the meaning of your content - make sure you write "let's eat, kids", not "let's eat kids"!
+- `PublicationReady` - This is a boolean value that indicates whether the `markdown` file is ready to be published. **true** will be published into `production` environments, while **false** will be published to `UAT`.
+- `ForExternalPublication` - This is a boolean value that indicates whether the content should be available on the **public** or **internal** portal.
 
-* **Include a Glossary**: Explain the terms and their definitions, if required. **[Ed: We should maintain a centralised glossay in the dev portal]**
+For a publicly accessible API, your `markdown` doc should look like this:
 
+```md
+---
+PublicationReady: true
+ForExternalPublication: true
+---
+# Xyz API
+
+The `Xyz` API is a...
+```
+
+### Opening a PR to the Content Repository
+
+The Developer Portal ingests content from the [Documentation Repository](https://github.com/NewDayCards/NewDay.Docs.DevPortal.Content).
+
+In order to publish your documentation, you'll need to open a pull request. You need to add your content to a subdirectory of the `apiContent` directory.
+
+1. Fork and clone the repository
+2. Create a directory under `apiContent` for your `API`.
+3. Add your `index.md` documentation file.
+4. Add your `openapi.json` file.
+5. Open a pull request adding **Deb Dutta Das** and **David Whitney** as reviewers.
+6. Content will be revised and merged through discussion on the PR.
