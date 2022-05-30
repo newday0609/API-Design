@@ -6,21 +6,21 @@ To achieve this, we recommend you to refer to the following guidelines. However,
 
 ## Avoid Ambigous Language
 
-*Avoid* words like _might_, _could_, and _would_.
+*Avoid* words like *might*, *could*, and *would*.
 
-Example:  
+**Example:**
 
-**Avoid**: An error _might_ occur, if you do not enter correct information.  
+**Avoid**: An error _might_ occur, if you do not enter correct information.
 
-**Better**: The following error occurs, if you do not enter correct information.  
+**Better**: The following error occurs, if you do not enter correct information.
 
 ## Use Second Person
 
-Use _you_ instead of using third person pronouns _they_ or _customers_.
+Use *you* instead of using third person pronouns *they* or *customers*.
 
-Example:
+**Example:**
 
-**Avoid**: The customer must enter the previous address, if they have resided at the current address for less than 12 months.  
+**Avoid**: The customer must enter the previous address, if they have resided at the current address for less than 12 months.
 
 **Better**: You must enter the previous address, if you have resided at the current address for less than 12 months.
 
@@ -30,7 +30,7 @@ The company standard is to use British English.
 
 Example:
 
-Use *Authorisation* and **not** *Authorization*  
+Use *Authorisation* and **not** *Authorization*
 
 ## Avoid Latin Phrases and Abbreviations
 
@@ -38,7 +38,7 @@ It can be difficult to understand latin phrases. Hence, it is recommended to use
 
 Example:
 
-**Avoid**: e.g, i.e.  
+**Avoid**: e.g, i.e.
 
 **Better**: Example, that is
 
@@ -56,7 +56,7 @@ Example:
 
 ### API Parameters
 
-Use the same capitalisation as displayed in the API request or response message.  
+Use the same capitalisation as displayed in the API request or response message.
 
 ## Active versus Passive Voice
 
@@ -72,8 +72,8 @@ Example:
 
 Refrain using any words that may have a subtle indication of the following:
 
-* **Hurts any religious sentiment**: Do not mention any religion when you are explaining any concept or citing an example.  
-* **Gender specific pronouns**: Use _they_ instead of _he_ or _she_, if required.
+* **Hurts any religious sentiment**: Do not mention any religion when you are explaining any concept or citing an example.
+* **Gender specific pronouns**: Use *they* instead of *he* or *she*, if required.
 * **Colloquial words**: Do not use any colloquial words that are not yet a part of the British English dictionary.
 
 ## Lists
@@ -102,51 +102,43 @@ Example:
 
 Based on your requirement, you may include the following under a list (bulleted or numbered):
 
-* Code blocks  
+* Code blocks
 * Images
-* Note/ALerts/Disclaimers  
+* Note/ALerts/Disclaimers
 * Second level bulleted or numbered list
 
 Items within the nested list must align with the first character of the list item.
 
 Example:
 
-1. In Jira, raise a ticket in the backlog. Mention the following in the ticket:  
+1. In Jira, raise a ticket in the backlog. Mention the following in the ticket:
     * Summary
-    * Description  
+    * Description
     * Acceptance criteria
 2. Assign the reviewer.
 3. Incorporate the comments.
 
 ### Punctuation
 
-Missing or incorrect punctuation alter the meaning of your sentences. Consider the following:
+Missing or incorrect punctuation alter the meaning of your sentences.
 
-* Add comma (`,`) in the following scenarios:  
+Consider the following:
+
+* Add comma (`,`) in the following scenarios:
   * When you are mentioning a number of items.
+    **Example:**  Mango, apple, banana, and grapes.
 
-    Example:  Mango, apple, banana, and grapes.
-  
-  * When you mention the following:  
+  * When you mention the following:
     * However
     * Hence
     * Therefore
 
-  * When you want a short pause in your sentence:  
-
-    Example:
-
-    If it is raining, the school will finish early.
+  * When you want a short pause in your sentence:
+    **Example:** If it is raining, the school will finish early.
 
 * Add semicolon (`;`) when you are writing a complete sentence and it is related to the previous sentence.
-
-  Example:
-
-  The weather is lovely; it is neither too sunny nor too windy.
+  **Example:**  "The weather is lovely; it is neither too sunny nor too windy."
 
 * Add full stop (`.`) at the end of a complete sentence.
 
-  Example:
-
-  After the request is received, it takes about 5 seconds to return a response.
-  
+  **Example:** "After the request is received, it takes about 5 seconds to return a response."
