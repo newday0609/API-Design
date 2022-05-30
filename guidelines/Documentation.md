@@ -41,7 +41,7 @@ This **introduction** should include the following:
 
 You can (obviously!) include any additional information as applicable.
 
-Write the content in any editor [that supports Markdown format](https://www.markdownguide.org/cheat-sheet).
+Write the content in any editor that supports Markdown format. If you need additional guidance on Markdown, please refer to the [Markdown Cheatsheet](https://www.markdownguide.org/cheat-sheet).
 
 Provide this file as `index.md`.
 
