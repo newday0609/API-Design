@@ -21,6 +21,7 @@ This document is not meant to be exhaustive, and will likely change over time as
   - [Principles](#principles)
   - [API Standards](#api-standards)
   - [Guidelines](#guidelines)
+  - [Documentation Guidelines](#documentation-guidelines)
   - [Contributing](#contributing)
 
 <!-- /code_chunk_output -->
@@ -73,6 +74,10 @@ These are a set of recommendations for solving common problems in API design. We
 - [Collections and Pagination](guidelines/Collections.md)
 - [Naming](guidelines/Naming.md)
 - [New API Checklist](guidelines/NewAPIChecklist.md)
+
+## Documentation Guidelines
+
+Please read the [Documentation Guidelines](guidelines/Documentation.md) to understand what is required for publishing your API in the portal.
 
 ## Contributing
 
