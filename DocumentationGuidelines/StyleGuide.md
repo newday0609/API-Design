@@ -10,7 +10,7 @@ To achieve this, we recommend you to refer to the following guidelines. However,
 
 **Example:**
 
-**Avoid**: An error _might_ occur, if you do not enter correct information.
+**Avoid**: An error *might* occur, if you do not enter correct information.
 
 **Better**: The following error occurs, if you do not enter correct information.
 
