@@ -9,12 +9,7 @@ They must be suitable for both native and non-native English speakers.
 
 ## Table of Contents
 
-<!-- @import "[TOC]" {cmd="toc" depthFrom=1 depthTo=6 orderedList=false} -->
-
-<!-- code_chunk_output -->
-
 - [API Documentation Guidelines](#api-documentation-guidelines)
-  - [Table of Contents](#table-of-contents)
   - [Required Documents](#required-documents)
   - [The User Guide Content](#the-user-guide-content)
     - [Writing Style](#writing-style)
@@ -22,8 +17,6 @@ They must be suitable for both native and non-native English speakers.
   - [Document Publication Process](#document-publication-process)
     - [Adding Publication Front Matter](#adding-publication-front-matter)
     - [Opening a PR to the Content Repository](#opening-a-pr-to-the-content-repository)
-
-<!-- /code_chunk_output -->
 
 ## Required Documents
 
@@ -87,7 +80,7 @@ When you are describing the parameters, you must include at least the parameter 
 | Name | Text| Name of the credit applicant. |
 |Contact Number | String | Include examples, if required. For example: _The contact number must start with '07'; for example, 07458847898._|
 
-**Avoid redundent descriptions** - for example "Name" = "The Name". Rather ommit the description field than waste space.
+**Avoid redundant descriptions** - for example "Name" = "The Name". Rather ommit the description field than waste space.
 
 **It is expected that you use language provided tooling to generate these OpenAPI specs from your code.**
 
@@ -135,7 +128,7 @@ The Developer Portal ingests content from the [Documentation Repository](https:/
 
 In order to publish your documentation, you'll need to open a pull request. You need to add your content to a subdirectory of the `apiContent` directory.
 
-1. Fork and clone the repository
+1. Fork and clone the repository.
 2. Create a directory under `apiContent` for your `API`.
 3. Add your `index.md` documentation file.
 4. Add your `openapi.json` file.
