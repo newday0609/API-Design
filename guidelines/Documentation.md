@@ -121,13 +121,16 @@ ForExternalPublication: true
 # Xyz API
 
 The `Xyz` API is a...
+```
 
-### Adding Values to OpenAPI Specifications
+### Adding Values to OpenAPI Specification
 
 Add the following values to the Swagger files in JSON format:
 
-    {"x-newday-pub-ready": "True",
+```JSON
+  {"x-newday-pub-ready": "True",  
     "x-newday-for-external-publication": True}
+```
 
   `x-newday-pub-ready` if set to "True", the OpenAPI spec will be published in the production environment; otherwise, if set to "False", it will be published in the UAT.
   `x-newday-for-external-publication` if set to "True", the OpenAPI spec will be published in the external Developer Portal; otherwise, if set to "False", it will be published in the internal site.
