@@ -43,7 +43,7 @@ You can (obviously!) include any additional information as applicable.
 
 Write the content in any editor that supports Markdown format. If you need additional guidance on Markdown, please refer to the [Markdown Cheatsheet](https://www.markdownguide.org/cheat-sheet).
 
-Provide this file as `index.md`.
+Provide this file as `index.md`. Refer to the [MultiQuote API introduction](index.md) as an example.
 
 ### Writing Style
 
@@ -86,10 +86,11 @@ When you are describing the parameters, you must include at least the parameter 
 
 ## Document Publication Process
 
-Documentation publication relies on adding `front matter` to your `markdown` files. To add your teams `APIs` into the portal, you need to:
+Documentation publication process involves adding `front matter` to your `markdown` files and inserting specific values in the OpenAPI specs. To add your products `APIs` into the portal, you need to:
 
-1. Add the correct `Publication Front Matter`
-2. Open a `PR` to the [Documentation Repository](https://github.com/NewDayCards/NewDay.Docs.DevPortal.Content) with your `markdown` and `Open API Spec` files.
+1. Add the correct `Publication Front Matter` in the markdown file.
+2. Add values to the OpenAPI spec.
+3. Open a `PR` to the [Documentation Repository](https://github.com/NewDayCards/NewDay.Docs.DevPortal.Content) with your `markdown` and `Open API Spec` files.
 
 ### Adding Publication Front Matter
 
@@ -107,20 +108,29 @@ This file contains front-matter
 
 Our publication process requires two values:
 
-- `PublicationReady` - This is a boolean value that indicates whether the `markdown` file is ready to be published. **true** will be published into `production` environments, while **false** will be published to `UAT`.
-- `ForExternalPublication` - This is a boolean value that indicates whether the content should be available on the **public** or **internal** portal.
+- `PubReady` - This is a boolean value that indicates whether the file is ready to be published. **true** will be published in the `production` environments, while **false** will be published to the `UAT`.
+- `ForExternalPublication` - This is a boolean value that indicates whether the content should be available on the **public** or the **internal** portal.
 
 For a publicly accessible API, your `markdown` doc should look like this:
 
 ```md
 ---
-PublicationReady: true
+PubReady: true
 ForExternalPublication: true
 ---
 # Xyz API
 
 The `Xyz` API is a...
-```
+
+### Adding Values to OpenAPI Specifications
+
+Add the following values to the Swagger files in JSON format:
+
+    {"x-newday-pub-ready": "True",
+    "x-newday-for-external-publication": True}
+
+  `x-newday-pub-ready` if set to "True", the OpenAPI spec will be published in the production environment; otherwise, if set to "False", it will be published in the UAT.
+  `x-newday-for-external-publication` if set to "True", the OpenAPI spec will be published in the external Developer Portal; otherwise, if set to "False", it will be published in the internal site.
 
 ### Opening a PR to the Content Repository
 
@@ -129,8 +139,9 @@ The Developer Portal ingests content from the [Documentation Repository](https:/
 In order to publish your documentation, you'll need to open a pull request. You need to add your content to a subdirectory of the `apiContent` directory.
 
 1. Fork and clone the repository.
-2. Create a directory under `apiContent` for your `API`.
-3. Add your `index.md` documentation file.
-4. Add your `openapi.json` file.
-5. Open a pull request adding **Deb Dutta Das** and **David Whitney** as reviewers.
-6. Content will be revised and merged through discussion on the PR.
+2. Create a branch with your API product name.
+3. Create a directory under `apiContent` for your `API`.
+4. Add your `index.md` documentation file.
+5. Add your `openapi.json` file.
+6. Open a pull request adding **Deb Dutta Das** and **David Whitney** as reviewers.
+    Content will be revised and merged through discussion on the PR.
