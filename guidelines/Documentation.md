@@ -129,7 +129,7 @@ Add the following values to the Swagger files in JSON format:
 
 ```JSON
   {"x-newday-pub-ready": "True",  
-    "x-newday-for-external-publication": True}
+    "x-newday-for-external-publication": "True"}
 ```
 
   `x-newday-pub-ready` if set to "True", the OpenAPI spec will be published in the production environment; otherwise, if set to "False", it will be published in the UAT.
