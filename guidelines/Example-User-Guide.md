@@ -30,7 +30,6 @@ The API performs the following:
     * **Declined**: The application for availing NewDay credit is rejected.
 
 > **Note** Credit quotation for each product mentions the Annual Percentage Rate (APR) of a product and the maximum credit limit allowed to the applicant.
-|-|-|
 
 ## Benefits
 
@@ -39,7 +38,6 @@ The API performs the following:
 * **APR and credit limit**: The API response mentions the APR of a NewDay product and the maximum credit limit allowed to your applicant.
 
 >**Note** If you are procuring Open Banking consent from your applicants, NewDay will support you in your initiative with using Open Banking data. In fact, this process enhances an applicant's chance of being approved for NewDay credit.
-|-|-|
 
 ## MultiQuote API in the Acquisition Workflow
 
