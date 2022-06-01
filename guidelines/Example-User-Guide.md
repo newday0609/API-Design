@@ -1,5 +1,5 @@
 ---
-PublicationReady: true
+PubReady: true
 ForExternalPublication: true
 ---
 
