@@ -43,7 +43,9 @@ You can (obviously!) include any additional information as applicable.
 
 Write the content in any editor that supports Markdown format. If you need additional guidance on Markdown, please refer to the [Markdown Cheatsheet](https://www.markdownguide.org/cheat-sheet).
 
-Provide this file as `index.md`. Refer to the [MultiQuote API introduction](index.md) as an example.
+Provide this file as `index.md`. Refer to the [MultiQuote API introduction](./Example-User-Guide.md) as an example.
+
+>**Note** The diagram included in the example file is not the final product and will soon be replaced.
 
 ### Writing Style
 
@@ -125,7 +127,7 @@ The `Xyz` API is a...
 
 ### Adding Values to OpenAPI Specification
 
-Add the following values to the Swagger files in JSON format:
+Add the following values to the Swagger files (at each endpoint level) in JSON format:
 
 ```JSON
   {"x-newday-pub-ready": "True",  
@@ -142,9 +144,8 @@ The Developer Portal ingests content from the [Documentation Repository](https:/
 In order to publish your documentation, you'll need to open a pull request. You need to add your content to a subdirectory of the `apiContent` directory.
 
 1. Fork and clone the repository.
-2. Create a branch with your API product name.
-3. Create a directory under `apiContent` for your `API`.
-4. Add your `index.md` documentation file.
-5. Add your `openapi.json` file.
-6. Open a pull request adding **Deb Dutta Das** and **David Whitney** as reviewers.
+2. Create a directory under `apiContent` for your `API`.
+3. Add your `index.md` documentation file.
+4. Add your `openapi.json` file.
+5. Open a pull request adding **Deb Dutta Das** and **David Whitney** as reviewers.
     Content will be revised and merged through discussion on the PR.
