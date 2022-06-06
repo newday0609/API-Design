@@ -135,7 +135,7 @@ Add the following values to the Swagger files (at each endpoint level) in JSON f
 ```
 
   `x-newday-pub-ready` if set to "True", the OpenAPI spec will be published in the production environment; otherwise, if set to "False", it will be published in the UAT.
-  `x-newday-for-external-publication` if set to "True", the OpenAPI spec will be published in the external Developer Portal; otherwise, if set to "False", it will be published in the internal site.
+  `x-newday-external-ready` if set to "True", the OpenAPI spec will be published in the external Developer Portal; otherwise, if set to "False", it will be published in the internal site.
 
 ### Opening a PR to the Content Repository
 
