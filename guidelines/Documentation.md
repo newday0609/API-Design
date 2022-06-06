@@ -110,15 +110,15 @@ This file contains front-matter
 
 Our publication process requires two values:
 
-- `PubReady` - This is a boolean value that indicates whether the file is ready to be published. **true** will be published in the `production` environments, while **false** will be published to the `UAT`.
-- `ForExternalPublication` - This is a boolean value that indicates whether the content should be available on the **public** or the **internal** portal.
+- `pub-ready` - This is a boolean value that indicates whether the file is ready to be published. **true** will be published in the `production` environments, while **false** will be published to the `UAT`.
+- `external-ready` - This is a boolean value that indicates whether the content should be available on the **public** or the **internal** portal.
 
 For a publicly accessible API, your `markdown` doc should look like this:
 
 ```md
 ---
-PubReady: true
-ForExternalPublication: true
+x-newday-pub-ready: true
+x-newday-external-ready: true
 ---
 # Xyz API
 
@@ -131,7 +131,7 @@ Add the following values to the Swagger files (at each endpoint level) in JSON f
 
 ```JSON
   {"x-newday-pub-ready": "True",  
-    "x-newday-for-external-publication": "True"}
+    "x-newday-external-ready": "True"}
 ```
 
   `x-newday-pub-ready` if set to "True", the OpenAPI spec will be published in the production environment; otherwise, if set to "False", it will be published in the UAT.
