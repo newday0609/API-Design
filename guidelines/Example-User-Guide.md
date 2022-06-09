@@ -1,6 +1,6 @@
 ---
-PubReady: true
-ForExternalPublication: true
+x-newday-pub-ready: true
+x-newday-external-ready: true
 ---
 
 # Introduction
