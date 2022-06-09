@@ -117,8 +117,8 @@ For a publicly accessible API, your `markdown` doc should look like this:
 
 ```md
 ---
-x-newday-pub-ready: true
-x-newday-external-ready: true
+pub-ready: true
+external-use: true
 ---
 # Xyz API
 
@@ -129,13 +129,16 @@ The `Xyz` API is a...
 
 Add the following values to the Swagger files (at each endpoint level) in JSON format:
 
-```JSON
-  {"x-newday-pub-ready": "True",  
-    "x-newday-external-ready": "True"}
+```{
+  "x-pub-settings": {  
+    "pub-ready": true,
+    "external-use": true
+  }
+}
 ```
 
-* `x-newday-pub-ready` if set to "True", the OpenAPI spec will be published in the production environment; otherwise, if set to "False", it will be published in the UAT.  
-* `x-newday-external-ready` if set to "True", the OpenAPI spec will be published in the external Developer Portal; otherwise, if set to "False", it will be published in the internal site.
+- `x-newday-pub-ready` if set to "True", the OpenAPI spec will be published in the production environment; otherwise, if set to "False", it will be published in the UAT.  
+- `x-newday-external-ready` if set to "True", the OpenAPI spec will be published in the external Developer Portal; otherwise, if set to "False", it will be published in the internal site.
 
 ### Opening a PR to the Content Repository
 
