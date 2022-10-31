@@ -66,7 +66,7 @@ In addition to the style guide, consider the following when writing:
 
 ## OpenAPI spec files
 
-Your spec file should be OpenAPI 3.0 and incluse at least the following properties:
+Your spec file should be OpenAPI 3.0 and include at least the following properties:
 
 - The path and any required query parameters
 - Example requests
